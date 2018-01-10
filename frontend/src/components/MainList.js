@@ -21,8 +21,9 @@ class MainList extends React.Component {
 }
 
 const mapStateToProps = state => {
-    const { loading, error, posts } = state.posts;
-    return { loading, error, posts };
+  console.log(state)
+  const { loading, error, posts } = state
+  return { loading, error, posts};
 };
 
 export default connect(mapStateToProps, {

@@ -24,7 +24,7 @@ const PostList = props => {
         <div>NO POSTS FOR THIS CATEGORY</div>
       );
     }
-  
+
     return component;
 }
 

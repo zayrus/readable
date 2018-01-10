@@ -3,11 +3,8 @@ import { connect } from 'react-redux';
 
 class PostListItem extends React.Component {
 
-  componentDidMount() {
-    const { post } = this.props;
-  }
-
   render() {
+  console.log(this.props)
     const { post } = this.props;
 
     let component;
