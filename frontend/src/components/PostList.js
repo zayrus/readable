@@ -4,7 +4,7 @@ import PostListItem from './PostListItem'
 import orderBy from 'lodash/orderBy'
 
 const PostList = props => {
-    console.log('r7', props)
+    console.log('postList ', props)
     let posts = []
     if (props.loading === false && props.posts.length) {
       const filteredPosts = props.posts.filter(post => post.deleted === false)

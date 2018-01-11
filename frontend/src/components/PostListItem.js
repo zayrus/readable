@@ -15,9 +15,7 @@ class PostListItem extends React.Component {
             <div>
                 <span>post by</span> <strong>{post.author}</strong>{' '}
                 <span>{post.category.toUpperCase()}</span>
-                <span>{post.timestamp}</span>
             </div>
-            <div>{post.timestamp}</div>
             <span>{post.timestamp}</span>
         </div>
       );

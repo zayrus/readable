@@ -8,7 +8,10 @@ class MainList extends React.Component {
         this.props.requestPosts();
     }
     render() {
-      const { loading, error, posts } = this.props;
+      const { loading, error, posts } = this.props
+      console.log('loading ',loading)
+      console.log('posts ',posts)
+
       return (
         <div>
           <header>
@@ -21,7 +24,6 @@ class MainList extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state)
   const { loading, error, posts } = state
   return { loading, error, posts};
 };

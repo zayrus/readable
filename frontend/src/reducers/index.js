@@ -1,31 +1,9 @@
-import {
-    REQUEST_POSTS_SUCCESS,
-    REQUEST_POSTS_FAIL
-} from '../actions/index'
+import { combineReducers } from 'redux'
 
-const initialState = {
-  loading: true,
-  error: '',
-  posts: []
-};
+import categories from './categories'
+import posts from './posts'
 
-export default (state = initialState, action) => {
-  switch (action.type) {
-    case REQUEST_POSTS_SUCCESS:
-      return {
-        ...state,
-        loading: false,
-        error: '',
-        posts: action.payload
-      };
-    case REQUEST_POSTS_FAIL:
-      return {
-        ...state,
-        loading: false,
-        error: action.payload,
-        posts: []
-      };
-    default:
-      return state
-  }
-}
+export default combineReducers({
+  categories,
+  posts
+})
