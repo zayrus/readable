@@ -1,9 +1,15 @@
 import React from 'react'
-import { connect } from 'react-redux';
-import PostListItem from './PostListItem';
+import { connect } from 'react-redux'
+import PostListItem from './PostListItem'
+import orderBy from 'lodash/orderBy'
 
 const PostList = props => {
+    console.log('r7', props)
     let posts = []
+    if (props.loading === false && props.posts.length) {
+      const filteredPosts = props.posts.filter(post => post.deleted === false)
+      posts = orderBy(filteredPosts, [props.order], ['desc'])
+    }
     let component;
     if (props.loading) {
       component = (

@@ -8,15 +8,15 @@ class MainList extends React.Component {
         this.props.requestPosts();
     }
     render() {
-        const { loading, error, posts } = this.props;
-        return (
-            <div>
-                <header>
-                    <h2>List of All Posts</h2>
-                </header>
-                <PostList loading={loading} error={error} posts={posts} />
-            </div>
-        )
+      const { loading, error, posts } = this.props;
+      return (
+        <div>
+          <header>
+            <h2>List of All Posts</h2>
+          </header>
+          <PostList loading={loading} error={error} posts={posts} />
+        </div>
+      )
     }
 }
 

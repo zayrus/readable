@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 class PostListItem extends React.Component {
 
   render() {
-  console.log(this.props)
     const { post } = this.props;
 
     let component;
