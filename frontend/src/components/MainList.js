@@ -9,9 +9,7 @@ class MainList extends React.Component {
     }
     render() {
       const { loading, error, posts } = this.props
-      console.log('loading ',loading)
-      console.log('posts ',posts)
-
+      
       return (
         <div>
           <header>
@@ -24,7 +22,7 @@ class MainList extends React.Component {
 }
 
 const mapStateToProps = state => {
-  const { loading, error, posts } = state
+  const { loading, error, posts } = state.posts
   return { loading, error, posts};
 };
 

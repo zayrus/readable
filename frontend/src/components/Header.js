@@ -11,7 +11,6 @@ class Header extends React.Component {
   }
 
   render() {
-    console.log('categories ', this.props)
     const { loading, error, categories } = this.props
     let displayCategories
     if (loading) {

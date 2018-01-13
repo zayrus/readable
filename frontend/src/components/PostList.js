@@ -4,7 +4,6 @@ import PostListItem from './PostListItem'
 import orderBy from 'lodash/orderBy'
 
 const PostList = props => {
-    console.log('postList ', props)
     let posts = []
     if (props.loading === false && props.posts.length) {
       const filteredPosts = props.posts.filter(post => post.deleted === false)
@@ -34,6 +33,9 @@ const PostList = props => {
     return component;
 }
 
-const mapStateToProps = state => ({ posts: state.posts});
+const mapStateToProps = state => {
+  const { loading, error, posts } = state.posts
+  return { loading, error, posts}
+ }
 
 export default connect(mapStateToProps, {})(PostList);

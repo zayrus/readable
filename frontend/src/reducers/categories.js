@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
         ...state,
         loading: false,
         error: '',
-        posts: action.payload
+        categories: action.payload
       };
     case REQUEST_CATEGORIES_FAIL:
       return {
