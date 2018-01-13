@@ -7,7 +7,7 @@ const initialState = {
   loading: true,
   error: '',
   categories: []
-};
+}
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -17,13 +17,13 @@ export default (state = initialState, action) => {
         loading: false,
         error: '',
         categories: action.payload
-      };
+      }
     case REQUEST_CATEGORIES_FAIL:
       return {
         ...state,
         loading: false,
         error: action.payload,
-      };
+      }
     default:
       return state
   }

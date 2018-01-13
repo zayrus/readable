@@ -9,7 +9,7 @@ const Loading = props => (
     height={props.height || 64}
     width={props.width || 64}
   />
-);
+)
 
-export default Loading;
+export default Loading
 

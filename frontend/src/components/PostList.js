@@ -9,28 +9,27 @@ const PostList = props => {
       const filteredPosts = props.posts.filter(post => post.deleted === false)
       posts = orderBy(filteredPosts, [props.order], ['desc'])
     }
-    let component;
+    let component
     if (props.loading) {
       component = (
         <div>Loading</div>
-      );
+      )
     } else if (props.error) {
       component = (
         <div>{props.error}</div>
-      );
+      )
     } else if (posts.length) {
       component = (
           <ul>
             {posts.map(post => <PostListItem key={post.id} post={post} />)}
           </ul>
-      );
+      )
     } else {
       component = (
         <div>NO POSTS FOR THIS CATEGORY</div>
-      );
+      )
     }
-
-    return component;
+    return component
 }
 
 const mapStateToProps = state => {
@@ -38,4 +37,4 @@ const mapStateToProps = state => {
   return { loading, error, posts}
  }
 
-export default connect(mapStateToProps, {})(PostList);
+export default connect(mapStateToProps, {})(PostList)

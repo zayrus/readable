@@ -1,12 +1,17 @@
 import React from 'react'
-import { connect } from 'react-redux';
-import { requestPosts } from '../actions';
-import PostList from './PostList';
+import { connect } from 'react-redux'
+import { requestPosts, resetPosts } from '../actions'
+import PostList from './PostList'
 
 class MainList extends React.Component {
     componentDidMount() {
-        this.props.requestPosts();
+        this.props.requestPosts()
     }
+
+    componentWillUnmount() {
+      this.props.resetPosts()
+    }
+
     render() {
       const { loading, error, posts } = this.props
       
@@ -23,9 +28,10 @@ class MainList extends React.Component {
 
 const mapStateToProps = state => {
   const { loading, error, posts } = state.posts
-  return { loading, error, posts};
-};
+  return { loading, error, posts}
+}
 
 export default connect(mapStateToProps, {
-    requestPosts
-  })(MainList);
+    requestPosts,
+    resetPosts
+  })(MainList)

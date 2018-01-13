@@ -1,12 +1,12 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
+import { connect } from 'react-redux'
 
 class PostListItem extends React.Component {
 
   render() {
-    const { post } = this.props;
+    const { post } = this.props
 
-    let component;
+    let component
       component = (
         <div>
             <div>
@@ -18,13 +18,13 @@ class PostListItem extends React.Component {
             </div>
             <span>{post.timestamp}</span>
         </div>
-      );
-    return component;
+      )
+    return component
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({})
 
 export default connect(mapStateToProps, { })(
   PostListItem
-);
+)

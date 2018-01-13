@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { requestCategories } from '../actions'
 import ShowError from '../components/ShowError'
@@ -14,9 +14,9 @@ class Header extends React.Component {
     const { loading, error, categories } = this.props
     let displayCategories
     if (loading) {
-      displayCategories = <Loading />;
+      displayCategories = <Loading />
     } else if (error) {
-      displayCategories = <ShowError errorToShow={error} />;
+      displayCategories = <ShowError errorToShow={error} />
     } else {
       displayCategories = categories.map(category => (
         <NavLink
@@ -47,9 +47,9 @@ class Header extends React.Component {
 }
 
 const mapStateToProps = state => {
-  const { loading, error, categories } = state.categories;
-  return { loading, error, categories };
-};
+  const { loading, error, categories } = state.categories
+  return { loading, error, categories }
+}
 
-export default connect(mapStateToProps, { requestCategories })(Header);
+export default connect(mapStateToProps, { requestCategories })(Header)
 
