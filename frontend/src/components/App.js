@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import MainList from './MainList'
 import Categories from './Categories'
-import '../App.css';
+import NewPost from './NewPost'
+import '../App.css'
 import Header from './Header'
 
 class App extends Component {
@@ -13,11 +14,12 @@ class App extends Component {
         <div className="container">
           <Switch>
             <Route path="/" exact component={MainList} />
+            <Route path="/new-post" component={NewPost} />
             <Route path="/:category" exact component={Categories} />
           </Switch>
         </div>
       </div>
-    );
+    )
   }
 }
 
