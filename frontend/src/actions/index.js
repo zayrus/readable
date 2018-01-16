@@ -1,4 +1,8 @@
 export * from './posts'
 export * from './categories'
+export * from './post'
 export * from './newPost'
-
+export * from './editPost'
+export * from './comments'
+export * from './commentCreate'
+export * from './commentEdit'
