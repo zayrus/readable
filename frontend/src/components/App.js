@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import MainList from './MainList'
 import Categories from './Categories'
 import NewPost from './NewPost'
-import '../App.css'
+import '../App.css';
 import Header from './Header'
 
 class App extends Component {

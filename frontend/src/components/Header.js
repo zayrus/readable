@@ -19,7 +19,7 @@ class Header extends React.Component {
       displayCategories = <ShowError errorToShow={error} />
     } else {
       displayCategories = categories.map(category => (
-        <NavLink
+        <NavLink className='tag'
           to={`/${category.name}`}
           key={category.name}
           name={category.name}
@@ -30,16 +30,17 @@ class Header extends React.Component {
     }
 
     return (
-      <div>
-        <NavLink to="/">
-          <span>Readable</span>
+      <div className='header'>
+        <NavLink className='header-title' to="/">
+          <i className='material-icons md-48'>home</i>
         </NavLink>
 
-        <div>{displayCategories}</div>
-
-        <NavLink to="/new-post">
-          <span>New Post</span>
-        </NavLink>
+        <div className='categories-container'>{displayCategories}</div>
+        <div className='add-post'>
+          <NavLink to="/new-post">
+            <i className="material-icons">add</i>
+          </NavLink>
+        </div>
       </div>
 
     )

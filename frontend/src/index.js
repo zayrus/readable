@@ -8,6 +8,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import reducers from './reducers'
 import { Provider } from 'react-redux'
 import Thunk from 'redux-thunk'
+import 'typeface-roboto'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(
