@@ -8,15 +8,15 @@ class PostListItem extends React.Component {
 
     let component
       component = (
-        <div>
-            <div>
+        <div className='post-list'>
+            <div className='post-list-data'>
                 {post.title}
-            </div>
-            <div>
+              <div>
                 <span>post by</span> <strong>{post.author}</strong>{' '}
                 <span>{post.category.toUpperCase()}</span>
+              </div>
+              <span>{post.timestamp}</span>
             </div>
-            <span>{post.timestamp}</span>
         </div>
       )
     return component

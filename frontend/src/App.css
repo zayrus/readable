@@ -70,3 +70,13 @@
 .add-post {
   margin-left: 30%;
 }
+
+.post-list {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.list-line-1 {
+  flex: 1;
+}
