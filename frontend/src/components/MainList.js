@@ -2,6 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { requestPosts, resetPosts } from '../actions'
 import PostList from './PostList'
+import PostOrder from './PostOrder'
+
 
 class MainList extends React.Component {
     componentDidMount() {
@@ -16,7 +18,11 @@ class MainList extends React.Component {
       const { loading, error, posts } = this.props
       
       return (
-        <div>
+        <div className='category'>
+        <header>
+          <h2>All posts</h2>
+          <PostOrder />
+        </header>
           <PostList loading={loading} error={error} posts={posts} />
         </div>
       )

@@ -32,9 +32,6 @@ const PostList = props => {
     return component
 }
 
-const mapStateToProps = state => {
-  const { loading, error, posts } = state.posts
-  return { loading, error, posts}
- }
+const mapStateToProps = state => ({ order: state.posts.order })
 
 export default connect(mapStateToProps, {})(PostList)
