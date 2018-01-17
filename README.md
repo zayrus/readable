@@ -1,4 +1,4 @@
-# Readabke Project
+# Readable Project
 
 ## Requisites
 - [Node.js and NPM](nodejs.org) >= v8.2.1
