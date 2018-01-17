@@ -14,7 +14,7 @@ const initialState = {
   title: '',
   body: '',
   category: 'none',
-  postCreate: {}
+  postNew: {}
 }
 
 export default (state = initialState, action) => {
@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
     case POST_CREATE_SUBMITTING:
       return { ...state, submitting: true }
     case POST_CREATE_SUCCESS:
-      return { ...state, postCreate: action.payload }
+      return { ...state, postNew: action.payload, submitting: false }
     case POST_CREATE_FAIL:
       return { ...state, submitting: false, error: action.payload }
     case POST_CREATE_RESET:

@@ -41,7 +41,6 @@ class NewPost extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     const {
       submitting,
       error,
