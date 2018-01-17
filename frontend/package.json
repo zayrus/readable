@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "date-fns": "^1.29.0",
     "lodash": "^4.17.4",
     "material-ui": "^1.0.0-beta.28",
     "react": "^16.2.0",

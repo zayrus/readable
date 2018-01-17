@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { setCommentToEdit, removeComment } from '../actions'
 import CommentFormEdit from './CommentFormEdit'
 import VoteCounter from './Counter'
+import format from 'date-fns/format'
 
 class CommentListItem extends React.Component {
 
@@ -40,9 +41,7 @@ class CommentListItem extends React.Component {
           </div>
 
           <div>
-            <span>{format(new Date(comment.timestamp), 'ddd')}</span>
-            <div>{format(new Date(comment.timestamp), 'MMM D')}</div>
-            <span>{format(new Date(comment.timestamp), 'YYYY')}</span>
+            <span>{format(new Date(comment.timestamp), 'ddd MMM D YYYY')}</span>
           </div>
 
           <button title="delete post" onClick={this.handleRemove}>

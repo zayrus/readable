@@ -13,11 +13,11 @@ import FormSubmit from './FormSubmit'
 import FormTextarea from './FormTextarea'
 import Loading from './Loading'
 
-class PostFormEdit extends React.Component {
+class EditPost extends React.Component {
 
   componentDidMount() {
     const { post_id } = this.props.match.params;
-    this.props.fetchPostToEdit(post_id);
+    this.props.requestPostToEdit(post_id);
   }
 
   componentWillUnmount() {
@@ -119,14 +119,14 @@ class PostFormEdit extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  loading: state.postEdit.loading,
-  errorFetch: state.postEdit.errorFetch,
-  post: state.postEdit.post,
-  submitting: state.postEdit.submitting,
-  errorSubmit: state.postEdit.errorSubmit,
-  title: state.postEdit.title,
-  body: state.postEdit.body,
-  postEdited: state.postEdit.postEdited
+  loading: state.editPost.loading,
+  errorFetch: state.editPost.errorFetch,
+  post: state.editPost.post,
+  submitting: state.editPost.submitting,
+  errorSubmit: state.editPost.errorSubmit,
+  title: state.editPost.title,
+  body: state.editPost.body,
+  postEdited: state.editPost.postEdited
 })
 
 export default connect(mapStateToProps, {
@@ -134,5 +134,5 @@ export default connect(mapStateToProps, {
   resetPostToEdit,
   setTextForPostEdit,
   postEdit
-})(PostFormEdit)
+})(EditPost)
 

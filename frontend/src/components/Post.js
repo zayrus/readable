@@ -4,15 +4,15 @@ import { Redirect } from 'react-router-dom'
 import { requestPost, resetPost } from '../actions'
 import ShowError from './ShowError'
 import Loading from './Loading'
-//import CommentFormNew from './CommentFormNew'
-//import CommentList from './CommentList'
+import CommentFormNew from './CommentFormNew'
+import CommentList from './CommentList'
 import PostListItem from './PostListItem'
 
 class Post extends React.Component {
 
   componentDidMount() {
     const { post_id } = this.props.match.params
-    this.props.fetchPost(post_id)
+    this.props.requestPost(post_id)
   }
 
   componentWillUnmount() {
@@ -50,6 +50,8 @@ class Post extends React.Component {
 
           <div>
             <h2>COMMENTS</h2>
+            <CommentList parentId={this.props.post.id} />
+            <CommentFormNew parentId={this.props.post.id} />
           </div>
         </div>
       )
