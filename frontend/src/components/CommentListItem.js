@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { setCommentToEdit, removeComment } from '../actions'
 import CommentFormEdit from './CommentFormEdit'
-import VoteCounter from './Counter'
+import Counter from './Counter'
 import format from 'date-fns/format'
 
 class CommentListItem extends React.Component {
@@ -25,13 +25,13 @@ class CommentListItem extends React.Component {
       component = <CommentFormEdit comment={comment} />
     } else {
       component = (
-        <li>
-          <VoteCounter item={comment} />
+        <li className='comment-item'>
+          <Counter item={comment} />
 
-          <div>
+          <div className='comment-data'>
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <div>{comment.body}</div>
-              <button onClick={this.startEditing}>
+              <div className='comment-body'>{comment.body}</div>
+              <button className='comment-edit' onClick={this.startEditing}>
                 <i className="material-icons">edit</i>
               </button>
             </div>
@@ -40,11 +40,11 @@ class CommentListItem extends React.Component {
             </div>
           </div>
 
-          <div>
+          <div className='format-date'>
             <span>{format(new Date(comment.timestamp), 'ddd MMM D YYYY')}</span>
           </div>
 
-          <button title="delete post" onClick={this.handleRemove}>
+          <button className='delete-comment' title="delete post" onClick={this.handleRemove}>
             <i className="material-icons">delete</i>
           </button>
         </li>

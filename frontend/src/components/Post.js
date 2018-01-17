@@ -40,15 +40,17 @@ class Post extends React.Component {
     } else {
       component = (
         <div>
-          <div>
-            <h2>POST</h2>
+          <div className='category'>
+            <header>
+              <h2>POST</h2>
+            </header>
             <div>
               <PostListItem post={this.props.post} />
-              <p>{this.props.post.body}</p>
+              <p className='post-body'>{this.props.post.body}</p>
             </div>
           </div>
 
-          <div>
+          <div className='comments-container'>
             <h2>COMMENTS</h2>
             <CommentList parentId={this.props.post.id} />
             <CommentFormNew parentId={this.props.post.id} />

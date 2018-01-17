@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FormInput = props => (
-  <div>
+  <div className='form-input'>
     <label htmlFor={props.htmlFor}>{props.label}</label>
     <input
       type="text"

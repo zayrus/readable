@@ -28,7 +28,7 @@ class Category extends React.Component {
     const { match, loading, error, posts } = this.props
 
     return (
-      <div>
+      <div className='category'>
         <header>
           <h2>{match.params.category.toUpperCase()} POSTS</h2>
           <PostOrder />

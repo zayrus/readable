@@ -59,10 +59,11 @@ class NewPost extends React.Component {
       component = <Redirect to={`/${postNew.category}/${postNew.id}`} />
     } else {
       component = (
-        <div>
-          <h2>NEW POST</h2>
-
-          <form onSubmit={this.handleSubmit}>
+        <div className='category'>
+          <header>
+            <h2>NEW POST</h2>
+          </header>
+          <form className='new-post-form' onSubmit={this.handleSubmit}>
             <FormInput
               label="Author"
               htmlFor="createAuthor"
@@ -96,7 +97,7 @@ class NewPost extends React.Component {
             />
 
             {error && (
-              <div>
+              <div className='middle'>
                 <ShowError msg={error} />
               </div>
             )}

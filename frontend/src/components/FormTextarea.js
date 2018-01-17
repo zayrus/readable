@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FormTextarea = props => (
-  <div>
+  <div className='form-textarea'>
     <label htmlFor={props.htmlFor}>{props.label}</label>
     <textarea
       id={props.htmlFor}

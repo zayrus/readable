@@ -25,14 +25,14 @@ class PostListItem extends React.Component {
     } else {
       const commentCount = post.comments ? post.comments.length : 0
       component = (
-        <li>
+        <li className='list-item'>
           <Counter item={post} isPost />
-          <div>
+          <div className='post-data'>
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <NavLink to={`/${post.category}/${post.id}`}>
+              <NavLink className='post-link-detail' to={`/${post.category}/${post.id}`}>
                 {post.title}
               </NavLink>
-              <NavLink to={`/${post.category}/${post.id}/edit`}>
+              <NavLink className='post-edit' to={`/${post.category}/${post.id}/edit`}>
                 <i className="material-icons">edit</i>
               </NavLink>
             </div>
@@ -41,17 +41,17 @@ class PostListItem extends React.Component {
               <span>post by</span> <strong>{post.author}</strong>{' '}
               <span>has</span> <strong>{commentCount}</strong>{' '}
               <span>comment{commentCount !== 1 && 's'}</span>{' '}
-              <NavLink to={`/${post.category}`} name={post.category}>
+              <NavLink className='tag' to={`/${post.category}`} name={post.category}>
                 {post.category.toUpperCase()}
               </NavLink>
             </div>
           </div>
 
-          <div>
+          <div className='format-date'>
             <span>{format(new Date(post.timestamp), 'ddd MMM D YYYY')}</span>
           </div>
 
-          <div title="delete post" onClick={this.handleRemove}>
+          <div className='delete-post' title="delete post" onClick={this.handleRemove}>
             <i className="material-icons">delete</i>
           </div>
         </li>

@@ -17,9 +17,6 @@ class MainList extends React.Component {
       
       return (
         <div>
-          <header>
-            <h2>List of All Posts</h2>
-          </header>
           <PostList loading={loading} error={error} posts={posts} />
         </div>
       )

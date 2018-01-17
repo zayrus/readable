@@ -4,6 +4,9 @@ import { connect } from 'react-redux'
 import { requestCategories } from '../actions'
 import ShowError from '../components/ShowError'
 import Loading from '../components/Loading'
+import Button from 'material-ui/Button'
+import AddIcon from 'material-ui-icons/Add'
+import ListIcon from 'material-ui-icons/List'
 
 class Header extends React.Component {
   componentDidMount() {
@@ -32,13 +35,17 @@ class Header extends React.Component {
     return (
       <div className='header'>
         <NavLink className='header-title' to="/">
-          <i className='material-icons md-48'>home</i>
+          <Button fab color="primary" aria-label="add">
+            <ListIcon />
+          </Button>
         </NavLink>
 
         <div className='categories-container'>{displayCategories}</div>
         <div className='add-post'>
           <NavLink to="/new-post">
-            <i className="material-icons">add</i>
+            <Button fab color="primary" aria-label="add">
+              <AddIcon />
+            </Button>
           </NavLink>
         </div>
       </div>

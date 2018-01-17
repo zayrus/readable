@@ -34,10 +34,10 @@ class CommentFormEdit extends React.Component {
     const { comment, submitting, error, body } = this.props
 
     return (
-      <div>
-        <button onClick={this.cancelEditing}>Cancel edit</button>
+      <div className='edit-comment'>
+        <button className='cancel-comment-edit' onClick={this.cancelEditing}>Cancel edit</button>
 
-        <form onSubmit={this.handleSubmit}>
+        <form className='edit-comment-form' onSubmit={this.handleSubmit}>
           <FormInput
             label="Author"
             htmlFor="editCommentAuthor"
@@ -55,7 +55,7 @@ class CommentFormEdit extends React.Component {
           />
 
           {error && (
-            <div>
+            <div className='middle'>
               <ShowError errorToShow={error} />
             </div>
           )}

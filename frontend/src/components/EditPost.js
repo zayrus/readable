@@ -67,10 +67,11 @@ class EditPost extends React.Component {
       );
     } else {
       component = (
-        <div>
-          <h2>EDIT POST</h2>
-
-          <form onSubmit={this.handleSubmit}>
+        <div className='category'>
+          <header>
+            <h2>EDIT POST</h2>
+          </header>
+          <form className='post-form' onSubmit={this.handleSubmit}>
             <FormInput
               label="Author"
               htmlFor="editPostAuthor"
@@ -103,7 +104,7 @@ class EditPost extends React.Component {
             />
 
             {errorSubmit && (
-              <div>
+              <div className='middle'>
                 <ShowError errorToShow={errorSubmit} />
               </div>
             )}

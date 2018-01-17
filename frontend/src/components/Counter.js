@@ -27,7 +27,7 @@ class VoteCounter extends React.Component {
   render() {
     const { item } = this.props;
     return (
-      <div>
+      <div className='votes'>
         <button title="vote up" onClick={this.handleIncrease}>
           <i className="material-icons">keyboard_arrow_up</i>
         </button>

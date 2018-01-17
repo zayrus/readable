@@ -12,11 +12,11 @@ const PostList = props => {
     let component
     if (props.loading) {
       component = (
-        <div>Loading</div>
+        <div className='middle'>Loading</div>
       )
     } else if (props.error) {
       component = (
-        <div>{props.error}</div>
+        <div className='middle'>{props.error}</div>
       )
     } else if (posts.length) {
       component = (
@@ -26,7 +26,7 @@ const PostList = props => {
       )
     } else {
       component = (
-        <div>NO POSTS FOR THIS CATEGORY</div>
+        <div className='middle'>0 posts founded for this category</div>
       )
     }
     return component

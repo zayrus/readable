@@ -32,13 +32,13 @@ class CommentList extends React.Component {
     let component
     if (loading) {
       component = (
-        <div>
+        <div className='middle'>
           <Loading />
         </div>
       )
     } else if (error) {
       component = (
-        <div>
+        <div className='middle'>
           <ShowError errorToShow={error} />
         </div>
       )
@@ -52,8 +52,8 @@ class CommentList extends React.Component {
       )
     } else {
       component = (
-        <div>
-          <div>NO COMMENTS FOR THIS POST</div>
+        <div className='middle'>
+          <div>This post haven't comments. Be the first! :)</div>
         </div>
       )
     }

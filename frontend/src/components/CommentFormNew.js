@@ -35,8 +35,8 @@ class CommentFormNew extends React.Component {
     const disabled = !author.trim() || !body.trim();
 
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className='new-comment'>
+        <form className='create-comment-form' onSubmit={this.handleSubmit}>
           <FormInput
             label="Author"
             htmlFor="createCommentAuthor"
@@ -54,7 +54,7 @@ class CommentFormNew extends React.Component {
           />
 
           {error && (
-            <div>
+            <div className='middle'>
               <ShowError errorToShow={error} />
             </div>
           )}

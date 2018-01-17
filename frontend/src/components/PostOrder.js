@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { setPostsOrder } from '../actions'
+import Button from 'material-ui/Button';
 
 class PostOrder extends React.Component {
 
@@ -13,24 +14,23 @@ class PostOrder extends React.Component {
   }
 
   render() {
-    const { order } = this.props
-
+    const { order} = this.props
     return (
       <div>
-        <span>Order by:</span>
-        <button
+        <span className='grey'>Order by:</span>
+        <Button color="primary"
           onClick={this.orderByDate}
           selected={order === 'timestamp'}
         >
           DATE
-        </button>
+        </Button>
         <span>/</span>
-        <button
+        <Button color="primary"
           onClick={this.orderByScore}
           selected={order === 'voteScore'}
         >
           SCORE
-        </button>
+        </Button>
       </div>
     )
   }

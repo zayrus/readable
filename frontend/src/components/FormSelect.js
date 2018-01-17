@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FormSelect = props => (
-  <div>
+  <div className='form-select'>
     <label htmlFor={props.htmlFor}>Category</label>
     <select id={props.htmlFor} value={props.value} onChange={props.onChange}>
       <option value="none" disabled>
